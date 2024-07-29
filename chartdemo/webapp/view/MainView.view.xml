@@ -1,0 +1,14 @@
+<mvc:View controllerName="chartdemo.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+    displayBlock="true"
+    >
+    <Page id="page" title="{i18n>title}">
+        <content >
+            <core:HTML afterRendering = "onRenderApex" content="&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"></core:HTML>
+            <core:HTML afterRendering = "onRenderApex" content="&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"></core:HTML>
+        </content >
+    </Page>
+</mvc:View>

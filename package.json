@@ -1,0 +1,17 @@
+{
+    "name": "com.chartdemo.chartdemoproject",
+    "scripts": {
+        "build": "mbt build --mtar com.chartdemo.chartdemoproject.mtar",
+        "build:workspaces": "npm run build --workspaces --if-present",
+        "deploy": "cf deploy mta_archives/com.chartdemo.chartdemoproject.mtar --retries 0",
+        "lint": "npm run lint --workspaces --if-present",
+        "ui5lint": "npm run ui5lint --workspaces --if-present",
+        "start:chartdemo": "npm start --workspace chartdemo"
+    },
+    "dependencies": {
+        "mbt": "^1"
+    },
+    "workspaces": [
+        "chartdemo"
+    ]
+}

@@ -1,0 +1,78 @@
+_schema-version: "3.2"
+ID: com.chartdemo.chartdemoproject
+version: 0.0.1
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install
+        - npm run build:workspaces
+modules:
+  - name: com.chartdemo.chartdemoproject-destination-content
+    type: com.sap.application.content
+    requires:
+      - name: com.chartdemo.chartdemoproject-uaa
+      - name: com.chartdemo.chartdemoproject-html-repo-host
+      - name: com.chartdemo.chartdemoproject-destination-service
+        parameters:
+          content-target: true
+    parameters:
+      content:
+        instance:
+          existing_destinations_policy: update
+          destinations:
+            - Name: com.chartdemo.chartdemoproject-html-repo-host
+              ServiceInstanceName: com.chartdemo.chartdemoproject-html-repo-host
+              ServiceKeyName: com.chartdemo.chartdemoproject-html-repo-host-key
+              sap.cloud.service: basic.service
+            - Name: com.chartdemo.chartdemoproject-uaa
+              ServiceInstanceName: com.chartdemo.chartdemoproject-uaa
+              ServiceKeyName: com.chartdemo.chartdemoproject-uaa-key
+              sap.cloud.service: basic.service
+              Authentication: OAuth2UserTokenExchange
+    build-parameters:
+      no-source: true
+  - name: com.chartdemo.chartdemoproject-ui-deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: com.chartdemo.chartdemoproject-html-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - dist/chartdemo-content.zip
+          name: chartdemo
+          target-path: resources/
+  - name: chartdemo
+    type: html5
+    path: chartdemo
+    build-parameters:
+      supported-platforms: []
+resources:
+  - name: com.chartdemo.chartdemoproject-destination-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-name: com.chartdemo.chartdemoproject-destination-service
+      service-plan: lite
+      config:
+        HTML5Runtime_enabled: true
+        version: 0.0.1
+  - name: com.chartdemo.chartdemoproject-html-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+      service-keys:
+        - name: com.chartdemo.chartdemoproject-html-repo-host-key
+  - name: com.chartdemo.chartdemoproject-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-plan: application
+      service-keys:
+        - name: com.chartdemo.chartdemoproject-uaa-key
