@@ -7,8 +7,6 @@
     >
     <Page id="page" title="{i18n>title}">
         <content >
-            <core:HTML afterRendering = "onRenderApex" content="&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"></core:HTML>
-            <core:HTML afterRendering = "onRenderApex" content="&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"></core:HTML>
         </content >
     </Page>
 </mvc:View>
