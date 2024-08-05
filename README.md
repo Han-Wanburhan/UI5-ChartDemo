@@ -167,7 +167,7 @@ This project is a demonstration of a charting application built in [specify the 
    ```
    <l:Grid
    defaultSpan="L6 M6 S12"
-          width="100%">
+   width="100%">
                 <l:content>
                 </l:content>
      </l:Grid>
