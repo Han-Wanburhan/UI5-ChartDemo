@@ -543,3 +543,32 @@ items="{/data}"
 <Text text="{path: 'MTD', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"/>
 <Text text="{path: 'YTD', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"/>
 ```
+
+8. Add Property items in Table
+
+```
+items="{/data2}"
+```
+
+9. Change Table Text
+
+```
+<Text text="{Product_Size}" />
+<Text text="{Meterial_Code}" />
+<Text text="{path:'Producer', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}" />
+<Text
+    text="{path: 'Yield', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"
+/>
+<Text
+    text="{path: 'Beginning_Stock', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"
+/>
+<Text
+    text="{path: 'Extracted', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"
+/>
+<Text
+    text="{path: 'Remaining', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"
+/>
+<Text
+    text="{path: 'Max_Stock_Pile', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"
+/>
+```
