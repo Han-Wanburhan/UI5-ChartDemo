@@ -177,37 +177,37 @@ This project is a demonstration of a charting application built in [specify the 
 
    ```
    <VBox width="100%">
-    <Text text="Daily Total Feed to Crushing Plant"
-       class="myCustomText" />
-    <Table id="table" inset="false"
-     class="customColumnHeader">
-    </Table>
+    <Text text="Daily Total Feed to Crushing Plant"
+        class="myCustomText" />
+    <Table id="table" inset="false"
+        class="customColumnHeader">
+    </Table>
    </VBox >
    ```
 
 3. Add Header Table in <Table></Table>:
 
    ```
-   <columns>
-    <Column hAlign="Left" width="auto">
-        <Text text="Stone" />
-     </Column>
-     <Column hAlign="Right">
-        <Text text="Daily Plan" />
-      </Column>
-      <Column hAlign="Left">
-         <Text text="Type" />
-       </Column>
-       <Column hAlign="Right">
-          <Text text="Daily" />
-         </Column>
-       <Column hAlign="Right">
-          <Text text="MTD" />
-       </Column>
-       <Column hAlign="Right">
-          <Text text="YTD" />
+    <columns>
+        <Column hAlign="Left" width="auto">
+            <Text text="Stone" />
         </Column>
-   </columns>
+        <Column hAlign="Right">
+            <Text text="Daily Plan" />
+        </Column>
+        <Column hAlign="Left">
+            <Text text="Type" />
+        </Column>
+        <Column hAlign="Right">
+            <Text text="Daily" />
+        </Column>
+        <Column hAlign="Right">
+            <Text text="MTD" />
+        </Column>
+        <Column hAlign="Right">
+            <Text text="YTD" />
+        </Column>
+    </columns>
    ```
 
 ### Chart With Odata
