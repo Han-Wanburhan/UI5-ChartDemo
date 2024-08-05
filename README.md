@@ -210,4 +210,207 @@ This project is a demonstration of a charting application built in [specify the 
     </columns>
    ```
 
+4. Add Data in `<Table></Table>`
+
+```
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="Chemical Stone ProductA" />
+                <Text text="12,500.00"/>
+                <Text text="New Blast" />
+                <Text text="4,130.44"/>
+                <Text text="12,803.87 "/>
+                <Text text="603,830.99"/>
+            </cells>
+        </ColumnListItem>
+    </items>
+```
+
+5. Create Text And Chart `<l:content></l:content>`
+
+```
+    <VBox width="100%">
+        <Text text="Chemical Stone % Yield"
+            class="myCustomText"/>
+        <core:HTML afterRendering="onRenderApex"
+            content="&lt;divid=&quot;chart&quot;&gt;
+            Hello Wolrd &lt;/div&gt;"/>
+    </VBox>
+```
+
+6. Create Text And Table `<content></content>`
+
+```
+    <l:Grid defaultSpan="L12 M12 S12"
+        width="100%">
+        <l:content>
+            <VBox width="100%">
+                <Text text="Daily Total Feed to Crushing Plant"
+                    class="myCustomText" />
+                <Table id="table" inset="false"
+                    class="customColumnHeader">
+                </Table>
+            </VBox >
+        </l:content>
+    </l:Grid>
+```
+
+7. Add Header Table `<Table></Table>`
+
+```
+<columns>
+    <Column hAlign="Left">
+        <Text text="Product Size" />
+    </Column>
+    <Column hAlign="Left">
+        <Text text="Meterial Code" />
+    </Column>
+    <Column hAlign="Right">
+        <Text text="Producer (Tons)" />
+    </Column>
+    <Column hAlign="Right">
+        <Text text="%Yield" />
+    </Column>
+    <Column hAlign="Right">
+        <Text text="Beginning Stock (Tons)" />
+    </Column>
+    <Column hAlign="Right">
+        <Text text="Extracted (Tons)" />
+    </Column>
+    <Column hAlign="Right">
+        <Text text="Remaining (Tons)" />
+    </Column>
+    <Column hAlign="Right">
+        <Text text="Max Stock Pile (Tons)" />
+    </Column>
+</columns>
+```
+
+8. Add Data in `<Table></Table>`
+
+```
+<items>
+    <ColumnListItem>
+        <cells>
+            <Text text="G/S (40-95)" />
+            <Text text="2CALGS" />
+            <Text text="2,272.82    " />
+            <Text text="50.00   " />
+            <Text text="14,403.59   " />
+            <Text text="-2,691.81   " />
+            <Text text="13,984.60   " />
+            <Text text="20,000.00" />
+        </cells>
+    </ColumnListItem>
+</items>
+```
+
+9. Edit CSS
+
+```
+.customColumnHeader table thead tr th {
+    background-color: #4caf50; /* เปลี่ยนสีตามต้องการ */
+    color: white; /* สีข้อความ */
+}
+.customColumnHeader table thead tr th span {
+    color: white !important;
+}
+.myCustomText {
+    font-size: 20px; /* ขนาดฟอนต์ที่คุณต้องการ */
+    font-weight: bold; /* น้ำหนักฟอนต์ */
+}
+#chart {
+    max-width: 920px !important;
+    width: 100% !important;
+    border: 1px solid #333;
+
+}
+```
+
 ### Chart With Odata
+
+1. Create Odata
+
+```
+const oData = {
+data: [{ Stone: "Chemical Stone ProductA“ DailyPlan: 12500, Type: "New Blast", Daily: 4130.44, MTD: 12803.87, YTD: 603830.99, },
+    {Stone: "Chemical Stone ProductA",DailyPlan: 12500,Type: "Scalper",Daily: 0.0,MTD: 0.0,YTD: 0.0,},
+    {Stone: "Total Chemical Stone ProductA",DailyPlan: "",Type: "",Daily: 4130.44,MTD: 12803.87,YTD: 603830.99,},
+    {Stone: "Chemical Stone ProductB",DailyPlan: 15000,Type: "New Blast",Daily: 0.0,MTD: 5663.61,YTD: 87565.46,},
+    {Stone: "Chemical Stone ProductB",DailyPlan: 15000,Type: "Scalper",Daily: 0.0,MTD: 0.0,YTD: 0.0,},
+    {Stone: "Total Chemical Stone ProductB",DailyPlan: "",Type: "",Daily: 0.0,MTD: 5663.61,YTD: 87565.46,},
+    {Stone: "Construction Stone Production",DailyPlan: 15000,Type: "New Blast",Daily: 851.36,MTD: 3069.1,YTD: 50227.49,},
+    {Stone: "Construction Stone Production",DailyPlan: 15000,Type: "Scalper",Daily: 0.0,MTD: 0.0,YTD: 0.0,},
+    {Stone: "Total Construction Stone Production",DailyPlan: "",Type: "",Daily: 851.36,MTD: 3069.1,YTD: 50227.49,},
+// เพิ่มข้อมูลตามต้องการ
+],
+data2: [
+    {Product_Size: "G/S (40-95)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 50.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,
+    Max_Stock_Pile: 20000.0,},
+    {Product_Size: "SS New (15-40)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
+    {Product_Size: "SS New (8-15)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
+    {Product_Size: "Dust (หินฝุ่นคุณภาพ)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
+    { Product_Size: "Mixed (หินคลุก)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
+    {Product_Size: "หินใต้สายพาน",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
+    {Product_Size: "Dailly Total Production",Meterial_Code: "",Producer: 2272.82,Yield: 100.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},],};
+const oModel = new sap.ui.model.json.JSONModel(oData);
+this.getView().setModel(oModel);
+```
+
+2. Add formatChartData function () {}
+
+```
+formatChartData: function () {
+    const oModel = this.getView().getModel();
+    const oData = oModel.getData();
+    const aFilteredData = oData.data2.slice(0, -1);
+    const aFormattedData = aFilteredData.map(function (item) {
+        return {
+            name: item.Product_Size,
+            value: parseFloat(item.Yield).toFixed(2),
+            };
+            });
+    oModel.setProperty("/chartData", aFormattedData);
+    this.onRenderApex();
+      },
+```
+
+3. Call formatChartData() in onInit
+
+```
+this.formatChartData()
+```
+
+4. Delete Static Data Use Data From Odata
+
+```
+const oChartData = this.getView().getModel().getProperty("/chartData");
+const seriesData = oChartData.map((item) => ({
+    name: item.name,
+    data: [parseFloat(parseFloat(item.value).toFixed(2))],
+    }));
+```
+
+5. Select Data
+
+```
+series: seriesData,
+```
+
+6. Add Property items in Table
+
+```
+items="{/data}"
+```
+
+7. Change Table Text
+
+```
+<Text text="{Stone}" />
+<Text text="{path: 'DailyPlan', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"/>
+<Text text="{Type}" />
+<Text text="{path: 'Daily', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"/>
+<Text text="{path: 'MTD', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"/>
+<Text text="{path: 'YTD', type: 'sap.ui.model.type.Float', formatOptions: { decimals: 2, preserveDecimals: false}}"/>
+```
