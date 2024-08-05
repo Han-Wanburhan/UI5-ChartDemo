@@ -177,7 +177,7 @@ This project is a demonstration of a charting application built in [specify the 
 
    ```
    <VBox width="100%">
-    <Text text="Daily Total Feed to Crushing Plant"
+    <Text text="Daily Total Feed to Crushing Plant"
         class="myCustomText" />
     <Table id="table" inset="false"
         class="customColumnHeader">
