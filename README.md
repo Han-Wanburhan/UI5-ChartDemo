@@ -11,6 +11,42 @@ This project is a demonstration of a charting application built in [specify the 
 
 ## Using ApexCharts In UI5
 
+1. Clone And Run the repository:
+
+   ```bash
+   git clone https://github.com/Han-Wanburhan/UI5-ChartDemo.git
+   npm install
+   cd .\chartdemo\
+   npm start
+   ```
+
+2. Add ApexCharts.js CDN Script into Index.html​
+
+   ```
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   ```
+
+3. Add Control in MainView.view.xml
+
+   ```
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns="sap.m"
+   xmlns:l="sap.ui.layout"
+   xmlns:core="sap.ui.core"
+   displayBlock="true"
+   ```
+
+4. Add Tag MainView.view.xml
+
+   ```
+   <core:HTML> </core:HTML>
+   ```
+
+5. Add content property in <core:HTML> </core:HTML>
+   ```
+   content = "&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"​
+   ```
+
 ### Custom Chart
 
 Ensure you have the following software installed on your machine:
