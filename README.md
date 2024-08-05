@@ -5,19 +5,15 @@ This project is a demonstration of a charting application built in [specify the 
 ## Table of Contents
 
 - [Using ApexCharts In UI5 ​](#Using-ApexCharts-In-UI5)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Custom Chart ](#Custom-Chart)
+- [Layout Sap UI5](#Layout-Sap-UI5)
+- [Chart With Odata​](#Chart-With-Odata​)
 
 ## Using ApexCharts In UI5
 
 These instructions will guide you through setting up and running the project on your local machine for development and testing purposes.
 
-### Prerequisites
+### Custom Chart
 
 Ensure you have the following software installed on your machine:
 
@@ -25,7 +21,7 @@ Ensure you have the following software installed on your machine:
 - [Gradle](https://gradle.org/install/) or [Maven](https://maven.apache.org/install.html) (specify the build tool used)
 - [Android Studio](https://developer.android.com/studio) (if it's an Android project)
 
-### Installation
+### Layout Sap UI5
 
 1. Clone the repository:
 
@@ -52,3 +48,11 @@ To run the application, use the following command:
 ```bash
 ./gradlew run
 ```
+
+### Chart With Odata
+
+Ensure you have the following software installed on your machine:
+
+- [Java Development Kit (JDK) 8 or later](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
+- [Gradle](https://gradle.org/install/) or [Maven](https://maven.apache.org/install.html) (specify the build tool used)
+- [Android Studio](https://developer.android.com/studio) (if it's an Android project)
