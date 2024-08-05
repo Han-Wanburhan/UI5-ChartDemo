@@ -333,29 +333,158 @@ This project is a demonstration of a charting application built in [specify the 
 1. Create Odata
 
 ```
-const oData = {
-data: [{ Stone: "Chemical Stone ProductA“ DailyPlan: 12500, Type: "New Blast", Daily: 4130.44, MTD: 12803.87, YTD: 603830.99, },
-    {Stone: "Chemical Stone ProductA",DailyPlan: 12500,Type: "Scalper",Daily: 0.0,MTD: 0.0,YTD: 0.0,},
-    {Stone: "Total Chemical Stone ProductA",DailyPlan: "",Type: "",Daily: 4130.44,MTD: 12803.87,YTD: 603830.99,},
-    {Stone: "Chemical Stone ProductB",DailyPlan: 15000,Type: "New Blast",Daily: 0.0,MTD: 5663.61,YTD: 87565.46,},
-    {Stone: "Chemical Stone ProductB",DailyPlan: 15000,Type: "Scalper",Daily: 0.0,MTD: 0.0,YTD: 0.0,},
-    {Stone: "Total Chemical Stone ProductB",DailyPlan: "",Type: "",Daily: 0.0,MTD: 5663.61,YTD: 87565.46,},
-    {Stone: "Construction Stone Production",DailyPlan: 15000,Type: "New Blast",Daily: 851.36,MTD: 3069.1,YTD: 50227.49,},
-    {Stone: "Construction Stone Production",DailyPlan: 15000,Type: "Scalper",Daily: 0.0,MTD: 0.0,YTD: 0.0,},
-    {Stone: "Total Construction Stone Production",DailyPlan: "",Type: "",Daily: 851.36,MTD: 3069.1,YTD: 50227.49,},
-// เพิ่มข้อมูลตามต้องการ
-],
-data2: [
-    {Product_Size: "G/S (40-95)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 50.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,
-    Max_Stock_Pile: 20000.0,},
-    {Product_Size: "SS New (15-40)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
-    {Product_Size: "SS New (8-15)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
-    {Product_Size: "Dust (หินฝุ่นคุณภาพ)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
-    { Product_Size: "Mixed (หินคลุก)",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
-    {Product_Size: "หินใต้สายพาน",Meterial_Code: "2CALGS",Producer: 2272.82,Yield: 10.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},
-    {Product_Size: "Dailly Total Production",Meterial_Code: "",Producer: 2272.82,Yield: 100.0,Beginning_Stock: 14403.59,Extracted: -2691.81,Remaining: 13984.6,Max_Stock_Pile: 20000.0,},],};
-const oModel = new sap.ui.model.json.JSONModel(oData);
-this.getView().setModel(oModel);
+        const oData = {
+          data: [
+            {
+              Stone: "Chemical Stone ProductA",
+              DailyPlan: 12500,
+              Type: "New Blast",
+              Daily: 4130.44,
+              MTD: 12803.87,
+              YTD: 603830.99,
+            },
+            {
+              Stone: "Chemical Stone ProductA",
+              DailyPlan: 12500,
+              Type: "Scalper",
+              Daily: 0.0,
+              MTD: 0.0,
+              YTD: 0.0,
+            },
+            {
+              Stone: "Total Chemical Stone ProductA",
+              DailyPlan: "",
+
+              Type: "",
+              Daily: 4130.44,
+              MTD: 12803.87,
+              YTD: 603830.99,
+            },
+            {
+              Stone: "Chemical Stone ProductB",
+              DailyPlan: 15000,
+              Type: "New Blast",
+              Daily: 0.0,
+              MTD: 5663.61,
+              YTD: 87565.46,
+            },
+            {
+              Stone: "Chemical Stone ProductB",
+              DailyPlan: 15000,
+              Type: "Scalper",
+              Daily: 0.0,
+              MTD: 0.0,
+              YTD: 0.0,
+            },
+            {
+              Stone: "Total Chemical Stone ProductB",
+              DailyPlan: "",
+              Type: "",
+              Daily: 0.0,
+              MTD: 5663.61,
+              YTD: 87565.46,
+            },
+            {
+              Stone: "Construction Stone Production",
+              DailyPlan: 15000,
+              Type: "New Blast",
+              Daily: 851.36,
+              MTD: 3069.1,
+              YTD: 50227.49,
+            },
+            {
+              Stone: "Construction Stone Production",
+              DailyPlan: 15000,
+              Type: "Scalper",
+              Daily: 0.0,
+              MTD: 0.0,
+              YTD: 0.0,
+            },
+            {
+              Stone: "Total Construction Stone Production",
+              DailyPlan: "",
+              Type: "",
+              Daily: 851.36,
+              MTD: 3069.1,
+              YTD: 50227.49,
+            },
+            // เพิ่มข้อมูลตามต้องการ
+          ],
+          data2: [
+            {
+              Product_Size: "G/S (40-95)",
+              Meterial_Code: "2CALGS",
+              Producer: 2272.82,
+              Yield: 50.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+            {
+              Product_Size: "SS New (15-40)",
+              Meterial_Code: "2CALGS",
+              Producer: 2272.82,
+              Yield: 10.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+            {
+              Product_Size: "SS New (8-15)",
+              Meterial_Code: "2CALGS",
+              Producer: 2272.82,
+              Yield: 10.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+            {
+              Product_Size: "Dust (หินฝุ่นคุณภาพ)",
+              Meterial_Code: "2CALGS",
+              Producer: 2272.82,
+              Yield: 10.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+            {
+              Product_Size: "Mixed (หินคลุก)",
+              Meterial_Code: "2CALGS",
+              Producer: 2272.82,
+              Yield: 10.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+            {
+              Product_Size: "หินใต้สายพาน",
+              Meterial_Code: "2CALGS",
+              Producer: 2272.82,
+              Yield: 10.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+            {
+              Product_Size: "Dailly Total Production",
+              Meterial_Code: "",
+              Producer: 2272.82,
+              Yield: 100.0,
+              Beginning_Stock: 14403.59,
+              Extracted: -2691.81,
+              Remaining: 13984.6,
+              Max_Stock_Pile: 20000.0,
+            },
+          ],
+        };
+        const oModel = new sap.ui.model.json.JSONModel(oData);
+        this.getView().setModel(oModel);
 ```
 
 2. Add formatChartData function () {}
