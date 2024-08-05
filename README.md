@@ -11,8 +11,6 @@ This project is a demonstration of a charting application built in [specify the 
 
 ## Using ApexCharts In UI5
 
-These instructions will guide you through setting up and running the project on your local machine for development and testing purposes.
-
 ### Custom Chart
 
 Ensure you have the following software installed on your machine:
@@ -23,11 +21,13 @@ Ensure you have the following software installed on your machine:
 
 ### Layout Sap UI5
 
-1. Clone the repository:
+1. Clone And Run the repository:
 
    ```bash
-   git clone https://github.com/yourusername/com.chartdemo.chartdemoproject.git
-   cd com.chartdemo.chartdemoproject
+   git clone https://github.com/Han-Wanburhan/UI5-ChartDemo.git
+   npm install
+   cd .\chartdemo\
+   npm start
    ```
 
 2. Build the project using Gradle:
