@@ -162,7 +162,7 @@ This project is a demonstration of a charting application built in [specify the 
 
 ### Layout Sap UI5
 
-1. Add in <content></content>:
+1. Add in `<content></content>`:
 
    ```
    <l:Grid
@@ -173,7 +173,7 @@ This project is a demonstration of a charting application built in [specify the 
      </l:Grid>
    ```
 
-2. Add in <l:content></l:content>:
+2. Add in `<l:content></l:content>`:
 
    ```
    <VBox width="100%">
@@ -185,7 +185,7 @@ This project is a demonstration of a charting application built in [specify the 
    </VBox >
    ```
 
-3. Add Header Table in <Table></Table>:
+3. Add Header Table in `<Table></Table>`:
 
    ```
     <columns>
