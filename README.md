@@ -246,9 +246,9 @@ This project is a demonstration of a charting application built in [specify the 
         width="100%">
         <l:content>
             <VBox width="100%">
-                <Text text="Daily Total Feed to Crushing Plant"
+                <Text text="Daily Total Feed to Crushing Plant"
                     class="myCustomText" />
-                <Table id="table" inset="false"
+                <Table id="table2" inset="false"
                     class="customColumnHeader">
                 </Table>
             </VBox >
