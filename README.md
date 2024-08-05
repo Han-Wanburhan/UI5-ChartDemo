@@ -4,7 +4,7 @@ This project is a demonstration of a charting application built in [specify the 
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
+- [Using ApexCharts In UI5 ​](#Using-ApexCharts-In-UI5)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -13,7 +13,7 @@ This project is a demonstration of a charting application built in [specify the 
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
-## Getting Started
+## Using ApexCharts In UI5
 
 These instructions will guide you through setting up and running the project on your local machine for development and testing purposes.
 
