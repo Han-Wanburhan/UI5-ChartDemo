@@ -44,7 +44,7 @@ This project is a demonstration of a charting application built in [specify the 
 
 5. Add content property in <core:HTML> </core:HTML>
    ```
-   content = "&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"​
+   content = "&lt;div id=&quot;chart&quot;&gt; Hello Wolrd &lt;/div&gt;"
    ```
 
 ### Custom Chart
