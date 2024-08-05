@@ -234,7 +234,7 @@ This project is a demonstration of a charting application built in [specify the 
         <Text text="Chemical Stone % Yield"
             class="myCustomText"/>
         <core:HTML afterRendering="onRenderApex"
-            content="&lt;divid=&quot;chart&quot;&gt;
+            content="&lt;div id=&quot;chart&quot;&gt;
             Hello Wolrd &lt;/div&gt;"/>
     </VBox>
 ```
