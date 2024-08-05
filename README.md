@@ -103,6 +103,111 @@ This project is a demonstration of a charting application built in [specify the 
 
 ### Custom Chart
 
+1. Change Background Color:
+
+   ```
+   background: "#e8d3f2"
+   ```
+
+2. Change Chart Color With Theme:
+
+   ```
+   theme: {palette: "palette5",},
+   ```
+
+3. Change Chart Color With Monochrome:
+
+   ```
+    theme: {
+   monochrome: {
+   enabled: true,color:"#255000",   
+   shadeTo: "light",
+   shadeIntensity: 0.65,         
+   },
+   },
+   ```
+
+4. Change Custom Chart Color :
+
+```
+  colors: [
+  "#008FFB",
+  "#00E396",
+  "#FEB019",
+  //สามารถเพิ่มสีเองได้ตามต้องการ
+  ],
+```
+
+5. Add Data Label :
+
+```
+ dataLabels: {
+            enabled: true,
+            style: {
+              colors: ["#ffffff"],
+            },
+            formatter: function (val, opts) {
+              const seriesIndex = opts.seriesIndex;
+              const dataIndex = opts.dataPointIndex;
+              console.log(options.series[seriesIndex].name);
+              return (
+                opts.w.globals.seriesNames[seriesIndex] +
+                ": " +
+                options.series[seriesIndex].data[dataIndex].toFixed(2) +
+                "%"
+              );
+            },
+          },
+```
+
 ### Layout Sap UI5
+
+1. Add in <content></content>:
+
+   ```
+    <l:Grid
+       defaultSpan="L6 M6 S12"
+          width="100%">
+                <l:content>
+                </l:content>
+     </l:Grid>
+   ```
+
+2. Add in <l:content></l:content>:
+
+   ```
+   <VBox width="100%">
+    <Text text="Daily Total Feed to Crushing Plant"
+       class="myCustomText" />
+    <Table id="table" inset="false"
+     class="customColumnHeader">
+    </Table>
+   </VBox >
+   ```
+
+3. Add Header Table in <Table></Table>:
+
+   ```
+   <columns>
+    <Column hAlign="Left" width="auto">
+        <Text text="Stone" />
+     </Column>
+     <Column hAlign="Right">
+        <Text text="Daily Plan" />
+      </Column>
+      <Column hAlign="Left">
+         <Text text="Type" />
+       </Column>
+       <Column hAlign="Right">
+          <Text text="Daily" />
+         </Column>
+       <Column hAlign="Right">
+          <Text text="MTD" />
+       </Column>
+       <Column hAlign="Right">
+          <Text text="YTD" />
+        </Column>
+   </columns>
+   ```
 
 ### Chart With Odata
