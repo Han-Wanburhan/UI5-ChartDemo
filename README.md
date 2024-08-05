@@ -30,10 +30,10 @@ Ensure you have the following software installed on your machine:
    npm start
    ```
 
-2. Build the project using Gradle:
+2. Add ApexCharts.js CDN Script into Index.html​
 
-   ```bash
-   ./gradlew build
+   ```
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
    ```
 
 3. (If applicable) Open the project in Android Studio:
