@@ -130,12 +130,24 @@ This project is a demonstration of a charting application built in [specify the 
 4. Change Custom Chart Color :
 
 ```
-  colors: [
-  "#008FFB",
-  "#00E396",
-  "#FEB019",
-  //สามารถเพิ่มสีเองได้ตามต้องการ
-  ],
+          colors: [
+            "#008FFB",
+            "#00E396",
+            "#FEB019",
+            "#FF4560",
+            "#775DD0",
+            "#546E7A",
+            "#26a69a",
+            "#d4e157",
+            "#f44336",
+            "#ab47bc",
+            "#ff7043",
+            "#8d6e63",
+            "#78909c",
+            "#ec407a",
+            "#7e57c2",
+          ],
+
 ```
 
 5. Add Data Label :
